@@ -1,7 +1,7 @@
 package com.codeclan.movies;
 
+import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 /**
@@ -9,9 +9,20 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class MoviesTest {
-    @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+
+public class MovieTest {
+
+    Movie movie;
+
+    @Before
+    public void before(){
+        movie = new Movie( "Apocalypse Now", "War", 1);
     }
+
+    @Test
+    public void testCanGetName(){
+        assertEquals("Apocalypse Now", movie.getTitle() );
+    }
+
+
 }
