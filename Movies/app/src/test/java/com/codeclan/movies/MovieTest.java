@@ -41,5 +41,14 @@ public class MovieTest {
         assertEquals("Dumb & Dumber", movie.getTitle() );
     }
 
+    @Test
+    public void testCanSetGenre(){
+        movie = new Movie("Apocalypse Now", "War", 1);
+        movie.setGenre("Comedy");
+        assertEquals( "Comedy", movie.getGenre() );
+    }
+
+    
+
 
 }
