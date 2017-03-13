@@ -34,5 +34,12 @@ public class MovieTest {
         assertEquals( 1, movie.getRanking() );
     }
 
+    @Test
+    public void testCanSetName(){
+        movie = new Movie("Apocalypse Now", "War", 1);
+        movie.setTitle("Dumb & Dumber");
+        assertEquals("Dumb & Dumber", movie.getTitle() );
+    }
+
 
 }
