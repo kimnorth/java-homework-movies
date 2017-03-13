@@ -52,7 +52,13 @@ public class MovieTest {
     public void testCanSetRating(){
         movie = new Movie("Apocalypse Now", "War", 1);
         movie.setRanking(2);
-        assertEquals( 2, movie.getRanking() );g
+        assertEquals( 2, movie.getRanking() );
+    }
+
+    @Test
+    public void testToString(){
+        String result = "Title: 'Apocalypse Now', Genre: 'War', Ranking: 1";
+        assertEquals(result, movie.toString());
     }
 
 
