@@ -41,11 +41,21 @@ public class RankingsTest {
     public void testReplaceFinalMovie(){
         rankings = new Rankings();
         movie = new Movie("Apocalypse Now", "War", 10);
-        movie2 = new Movie("Dumb & Dumber", "Comedy");
+        movie2 = new Movie("Dumb & Dumber", "Comedy", 22);
         rankings.replaceMovie(10, movie2);
         String searchResult = rankings.findByRanking(10);
         String result = "Title: 'Dumb & Dumber', Genre: 'Comedy', Ranking: 10";
         assertEquals(result, searchResult);
+    }
+
+    @Test
+    public void testFindMovieByTitle(){
+        rankings = new Rankings();
+        rankings.addMovie(movie);
+        String result = rankings.findMovieByTitle("Apocalypse Now");
+//        String resultToString = result.toString();
+        String expected = "Title: 'Apocalypse Now', Genre: 'War', Ranking: 1";
+        assertEquals(expected, result);
     }
 
 }

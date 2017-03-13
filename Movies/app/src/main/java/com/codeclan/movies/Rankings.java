@@ -40,5 +40,14 @@ public class Rankings {
         this.addMovie(movie);
     }
 
+    public String findMovieByTitle(String title){
+        for (Movie movie : rankings){
+            if (movie.getTitle() == title){
+                return movie.toString();
+            }
+        }
+        return "Not found";
+    }
+
 
 }
