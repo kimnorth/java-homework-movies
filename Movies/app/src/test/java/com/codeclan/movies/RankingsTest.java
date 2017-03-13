@@ -2,6 +2,9 @@ package com.codeclan.movies;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.logging.ConsoleHandler;
+
 import static org.junit.Assert.*;
 
 /**
@@ -22,7 +25,16 @@ public class RankingsTest {
     @Test
     public void testCanAddMovie(){
         rankings.addMovie(movie);
-        assertNotNull(rankings.getNumberOfItems());
+
+        assertEquals(1, rankings.getNumberOfItems());
     }
+
+//    @Test
+//    public void testFindMovieByRanking(){
+//        rankings.addMovie(movie);
+//        String searchResult = rankings.findByRanking(1);
+//        String expected = "Title: 'Apocalypse Now', Genre: 'War', Ranking: 1";
+//        assertEquals( expected, searchResult );
+//    }
 
 }

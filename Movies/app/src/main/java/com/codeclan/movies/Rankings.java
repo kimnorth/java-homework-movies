@@ -17,14 +17,23 @@ public class Rankings {
     public int getNumberOfItems(){
         int count = 0;
         for (Movie movie : rankings){
-            count++;
+            if (movie != null) {
+                count++;
+            }
         }
         return count;
     }
 
     public void addMovie(Movie movie){
         int index = movie.getRanking();
-        this.rankings[index] = movie;
+        this.rankings[index - 1] = movie;
     }
+
+    public String findByRanking(int ranking){
+        Movie movieObject = rankings[ranking];
+        String result = movieObject.toString();
+        return result;
+        }
+
 
 }
