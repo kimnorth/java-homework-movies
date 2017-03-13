@@ -48,7 +48,12 @@ public class MovieTest {
         assertEquals( "Comedy", movie.getGenre() );
     }
 
-    
+    @Test
+    public void testCanSetRating(){
+        movie = new Movie("Apocalypse Now", "War", 1);
+        movie.setRanking(2);
+        assertEquals( 2, movie.getRanking() );g
+    }
 
 
 }
