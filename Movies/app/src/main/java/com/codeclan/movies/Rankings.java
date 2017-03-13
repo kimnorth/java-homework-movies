@@ -30,7 +30,7 @@ public class Rankings {
     }
 
     public String findByRanking(int ranking){
-        Movie movieObject = rankings[ranking];
+        Movie movieObject = rankings[ranking - 1];
         String result = movieObject.toString();
         return result;
         }

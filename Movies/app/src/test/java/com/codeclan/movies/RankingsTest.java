@@ -25,16 +25,15 @@ public class RankingsTest {
     @Test
     public void testCanAddMovie(){
         rankings.addMovie(movie);
-
         assertEquals(1, rankings.getNumberOfItems());
     }
 
-//    @Test
-//    public void testFindMovieByRanking(){
-//        rankings.addMovie(movie);
-//        String searchResult = rankings.findByRanking(1);
-//        String expected = "Title: 'Apocalypse Now', Genre: 'War', Ranking: 1";
-//        assertEquals( expected, searchResult );
-//    }
+    @Test
+    public void testFindMovieByRanking(){
+        rankings.addMovie(movie);
+        String searchResult = rankings.findByRanking(1);
+        String expected = "Title: 'Apocalypse Now', Genre: 'War', Ranking: 1";
+        assertEquals( expected, searchResult );
+    }
 
 }
