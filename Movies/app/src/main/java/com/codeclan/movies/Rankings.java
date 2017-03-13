@@ -14,6 +14,12 @@ public class Rankings {
         this.rankings = new ArrayList<Movie>();
     }
 
-    
+    public int getLength(){
+        return rankings.size();
+    }
+
+    public void addMovie(Movie movie){
+        this.rankings.add(movie);
+    }
 
 }
