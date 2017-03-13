@@ -29,5 +29,10 @@ public class MovieTest {
         assertEquals( "War", movie.getGenre() );
     }
 
+    @Test
+    public void testCanGetRating(){
+        assertEquals( 1, movie.getRanking() );
+    }
+
 
 }
