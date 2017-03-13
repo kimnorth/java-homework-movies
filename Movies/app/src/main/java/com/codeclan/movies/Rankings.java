@@ -49,5 +49,21 @@ public class Rankings {
         return "Not found";
     }
 
+    public void moveUpOrDown(String chosenMovie, String direction){
+
+        for (Movie movie : rankings){
+            if (movie.getTitle() == chosenMovie){
+                if (direction == "Down"){
+                    int oldIndex = movie.getRanking();
+                    movie.setRanking(oldIndex - 1);
+                }
+                else if (direction == "Up"){
+                    int oldIndex = movie.getRanking();
+                    movie.setRanking(oldIndex + 1);
+                }
+            }
+        }
+    }
+
 
 }

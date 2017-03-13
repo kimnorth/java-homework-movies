@@ -58,4 +58,12 @@ public class RankingsTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void testMoveMovieUpOrDownAPlace(){
+        rankings = new Rankings();
+        rankings.addMovie(movie);
+        rankings.moveUpOrDown("Apocalypse Now", "Down");
+        assertEquals( 2, movie.getRanking() );
+    }
+
 }
