@@ -8,18 +8,23 @@ import java.util.ArrayList;
 
 public class Rankings {
 
-    ArrayList<Movie> rankings;
+    Movie[] rankings;
 
     public Rankings(){
-        this.rankings = new ArrayList<Movie>();
+        this.rankings = new Movie[10];
     }
 
-    public int getLength(){
-        return rankings.size();
+    public int getNumberOfItems(){
+        int count = 0;
+        for (Movie movie : rankings){
+            count++;
+        }
+        return count;
     }
 
     public void addMovie(Movie movie){
-        this.rankings.add(movie);
+        int index = movie.getRanking();
+        this.rankings[index] = movie;
     }
 
 }

@@ -22,7 +22,7 @@ public class RankingsTest {
     @Test
     public void testCanAddMovie(){
         rankings.addMovie(movie);
-        assertEquals(1, rankings.getLength() );
+        assertNotNull(rankings.getNumberOfItems());
     }
 
 }
