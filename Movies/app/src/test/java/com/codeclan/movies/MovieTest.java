@@ -24,5 +24,10 @@ public class MovieTest {
         assertEquals("Apocalypse Now", movie.getTitle() );
     }
 
+    @Test
+    public void testCanGetGenre(){
+        assertEquals( "War", movie.getGenre() );
+    }
+
 
 }
