@@ -35,5 +35,10 @@ public class Rankings {
         return result;
         }
 
+    public void replaceMovie(int ranking, Movie movie){
+        movie.setRanking(ranking);
+        this.addMovie(movie);
+    }
+
 
 }

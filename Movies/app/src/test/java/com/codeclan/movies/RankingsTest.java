@@ -15,6 +15,7 @@ public class RankingsTest {
 
     Rankings rankings;
     Movie movie;
+    Movie movie2;
 
     @Before
     public void before() {
@@ -34,6 +35,17 @@ public class RankingsTest {
         String searchResult = rankings.findByRanking(1);
         String expected = "Title: 'Apocalypse Now', Genre: 'War', Ranking: 1";
         assertEquals( expected, searchResult );
+    }
+
+    @Test
+    public void testReplaceFinalMovie(){
+        rankings = new Rankings();
+        movie = new Movie("Apocalypse Now", "War", 10);
+        movie2 = new Movie("Dumb & Dumber", "Comedy");
+        rankings.replaceMovie(10, movie2);
+        String searchResult = rankings.findByRanking(10);
+        String result = "Title: 'Dumb & Dumber', Genre: 'Comedy', Ranking: 10";
+        assertEquals(result, searchResult);
     }
 
 }
